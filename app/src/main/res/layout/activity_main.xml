@@ -9,10 +9,22 @@
     tools:context="com.example.astoundrushi.retrofit.activity.MainActivity">
 
     <TextView
+        android:id="@+id/movieTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_centerInParent="true"
-        android:id="@+id/helloWorld"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/top_movies"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/moviePager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movieTitle"
+        android:layout_marginTop="@dimen/pager_margin">
+    </android.support.v4.view.ViewPager>
+
+
 
 </RelativeLayout>

@@ -1,15 +1,26 @@
 package com.example.astoundrushi.retrofit.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
  * Created by Astound Rushi on 8/1/2016.
  */
 
-public class Movie
+public class MovieList
 {
-    int page,totalPages,totalResults;
-    List<MovieResponse> Results;
+    @SerializedName("page")
+    private int page;
+
+    @SerializedName("total_pages")
+    private int totalPages;
+
+    @SerializedName("total_results")
+    private int totalResults;
+
+    @SerializedName("results")
+    private List<MovieDetails> Results;
 
     public int getPage()
     {
@@ -41,12 +52,12 @@ public class Movie
         this.totalResults = totalResults;
     }
 
-    public List<MovieResponse> getResults()
+    public List<MovieDetails> getResults()
     {
         return Results;
     }
 
-    public void setResults(List<MovieResponse> results)
+    public void setResults(List<MovieDetails> results)
     {
         Results = results;
     }
